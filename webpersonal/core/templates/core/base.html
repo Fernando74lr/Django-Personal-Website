@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fernando | {% block title %}{% endblock%}</title>
+</head>
+<body>
+    <!-- Header and menu -->
+    <h1>My personal website</h1>
+
+    <ul>
+        <li><a href="{% url 'home' %}">Cover page</a></li>
+        <li><a href="{% url 'about' %}">About me</a></li>
+        <li><a href="{% url 'portfolio' %}">Portfolio</a></li>
+        <li><a href="{% url 'contact' %}">Contact</a></li>
+    </ul>
+
+    <!-- Content -->
+    {% block content %}{% endblock %}
+</body>
+</html>
