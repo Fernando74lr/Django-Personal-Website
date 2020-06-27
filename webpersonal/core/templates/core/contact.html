@@ -1,9 +1,23 @@
+<!-- Extensions -->
 {% extends 'core/base.html' %}
 
+<!-- Title -->
 {% block title %}Contact{% endblock%}
 
-{% block content %}
-    <h2>Contact</h2>
+<!-- Background -->
+{% block background %}{% load static %}{% static 'core/img/contact-bg.jpg' %}{% endblock %}
 
-    <p>Contact me: <a href="#">flopezramirez@hotmail.com</a></p>
+<!-- Headers -->
+{% block headers %}
+    <h1>Contact</h1>
+{% endblock %}
+
+<!-- Content -->
+{% block content %}
+    <div class="col-lg-8 col-md-10 mx-auto">
+        <p>{% lorem 1 %}</p>
+        <br>
+        <p><b>Cellphone:</b> +52 22-26-75-48-31</p>
+        <p><b>Honorarios:</b> 60€/h (precio base)</p>
+    </div>
 {% endblock %}
