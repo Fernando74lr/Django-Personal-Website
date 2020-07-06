@@ -1,0 +1,33 @@
+<!-- Extensions -->
+{% extends 'core/base.html' %}
+
+<!-- Title -->
+{% block title %}Portfolio{% endblock %}
+
+<!-- Background -->
+{% block background %}{% load static %}{% static 'core/img/portfolio-bg.jpg' %}{% endblock %}
+
+<!-- Headers -->
+{% block headers %}
+    <h1>Portfolio</h1>
+{% endblock %}
+
+<!-- Content -->
+{% block content %}
+    <!-- Projects-->
+    {% for project in projects %}
+        <div class="row project">  	
+            <div class="col-lg-3 col-md-4 offset-lg-1">
+                <img class="img-fluid" src="{{project.image.url}}" alt="" style="border-radius:5px!important;">
+            </div>
+            <div class="col-lg-7 col-md-8">
+                <h2 class="section-heading title">{{project.title}}</h2>   
+                <p>{{project.description}}</p>
+                {% if project.url %}
+                    <p><a href="{{project.url}}" target="_blank">Más información</a></p>
+                {% endif %}
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}
+

@@ -6,6 +6,7 @@ class Project(models.Model):
     title = models.CharField(max_length=100, verbose_name="Title")
     description = models.TextField(verbose_name="Description")
     image = models.ImageField(verbose_name="Image", upload_to="projects")
+    url = models.URLField(verbose_name="URL", blank=True, null=True)
     created = models.DateTimeField(auto_now_add=True, verbose_name="Date of creation")
     updated = models.DateTimeField(auto_now=True, verbose_name="Date of modification")
 
