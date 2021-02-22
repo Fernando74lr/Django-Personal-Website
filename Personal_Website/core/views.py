@@ -1,5 +1,6 @@
 from django.shortcuts import render
 
+# Views
 def home(request):
     return render(request, 'core/index.html')
 
